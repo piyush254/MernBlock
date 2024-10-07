@@ -1,11 +1,24 @@
-import React from 'react'
-
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Dashboard from "./pages/Dashboard";
+import Signin from "./pages/Signin";
+import Projects from "./pages/Projects";
+import Signup from "./pages/Signup";
 function App() {
   return (
-    <div className='text-red-500 h-screen w-screen flex items-center justify-center'>
-    APP
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="signin" element={<Signin />} />
+        <Route path="signup" element={<Signup />} />
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="projects" element={<Projects />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
