@@ -12,60 +12,30 @@ const YourComponent = () => {
       ourPackages: "DIABETES PROFILE",
       samples: [{ sampleType: "", barcode: "" }],
     },
-    {
-      benName: "jose",
-      ourPackages: "THYROID FUNCTION TESTS",
-      samples: [{ sampleType: "", barcode: "" }],
-    },
-    {
-      benName: "Shachi",
-      ourPackages: "KIDNEY FUNCTION TESTS",
-      samples: [{ sampleType: "", barcode: "" }],
-    },
-    {
-      benName: "Surya",
-      ourPackages: "COMPLETE BLOOD COUNT",
-      samples: [{ sampleType: "", barcode: "" }],
-    },
-    {
-      benName: "Uddhav",
-      ourPackages: "VITAMIN D TEST",
-      samples: [{ sampleType: "", barcode: "" }],
-    },
-    {
-      benName: "Ayisha",
-      ourPackages: "LIVER FUNCTION TESTS",
-      samples: [{ sampleType: "", barcode: "" }],
-    },
-    {
-      benName: "Pooja",
-      ourPackages: "CARDIAC PROFILE",
-      samples: [{ sampleType: "", barcode: "" }],
-    },
-    {
-      benName: "Piyush",
-      ourPackages: "KIDNEY FUNCTION TESTS",
-      samples: [{ sampleType: "", barcode: "" }],
-    },
-    {
-      benName: "Retheesh",
-      ourPackages: "THYROID FUNCTION TESTS",
-      samples: [{ sampleType: "", barcode: "" }],
-    },
+    // Add more entries as needed...
   ]);
 
-  // Function to handle input changes for a specific field and index
+  const sampleTypeOptions = [
+    { id: 1, type: "Blood" },
+    { id: 2, type: "Urine" },
+    { id: 3, type: "Saliva" },
+    { id: 4, type: "Tissue" },
+  ];
+
   const handleInputChange2 = (e, index, sampleIndex, field) => {
     const updatedEntries = [...barcodesEntry];
     updatedEntries[index].samples[sampleIndex][field] = e.target.value;
     setBarcodesEntry(updatedEntries);
   };
 
-  // Function to add a new Sample Type and Barcode entry at a specific index
   const addEntry = (index) => {
     const updatedEntries = [...barcodesEntry];
     updatedEntries[index].samples.push({ sampleType: "", barcode: "" });
     setBarcodesEntry(updatedEntries);
+  };
+
+  const handleSubmit = () => {
+    console.log("Submitted Data:", barcodesEntry);
   };
 
   return (
@@ -91,6 +61,7 @@ const YourComponent = () => {
 
           {item.samples.map((sample, sampleIndex) => (
             <div key={sampleIndex} className="grid grid-cols-2 gap-4 mb-4">
+              {/* Dropdown for Sample Type */}
               <div>
                 <label
                   htmlFor={`sampleType${index}-${sampleIndex}`}
@@ -105,19 +76,27 @@ const YourComponent = () => {
                   >
                     <i className="fas fa-plus">+</i>
                   </button>
-                  <input
-                    type="text"
+                  <select
                     className="w-full p-2 border border-gray-300 rounded"
                     id={`sampleType${index}-${sampleIndex}`}
-                    placeholder="Enter Sample Type"
                     value={sample.sampleType}
                     onChange={(e) =>
                       handleInputChange2(e, index, sampleIndex, "sampleType")
                     }
-                  />
+                  >
+                    <option value="" disabled>
+                      Select Sample Type
+                    </option>
+                    {sampleTypeOptions.map((option) => (
+                      <option key={option.id} value={option.type}>
+                        {option.type}
+                      </option>
+                    ))}
+                  </select>
                 </div>
               </div>
 
+              {/* Input for Barcode */}
               <div>
                 <label
                   htmlFor={`barcode${index}-${sampleIndex}`}
@@ -142,7 +121,10 @@ const YourComponent = () => {
       ))}
 
       <div className="flex justify-center mt-6">
-        <button className="bg-green-500 text-white px-6 py-2 rounded">
+        <button
+          className="bg-green-500 text-white px-6 py-2 rounded"
+          onClick={handleSubmit}
+        >
           Submit All
         </button>
       </div>

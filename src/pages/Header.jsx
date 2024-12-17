@@ -62,9 +62,15 @@ function Header() {
           <NavLink to="/ServiceCheckbox" className={({ isActive }) => (isActive ? "active" : "")}>
             Service Checkbox
             </NavLink>
-        </li><li>
+        </li>
+        <li>
           <NavLink to="/NotificationForm" className={({ isActive }) => (isActive ? "active" : "")}>
               Notification Form
+            </NavLink>
+        </li>
+        <li>
+          <NavLink to="/ButtonsAndDiv" className={({ isActive }) => (isActive ? "active" : "")}>
+          Buttons And Div
             </NavLink>
         </li>
         </ul>

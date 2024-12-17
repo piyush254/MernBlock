@@ -13,10 +13,12 @@ import Header from "./pages/Header";
 import CodeSnippet from "./pages/CodeSnippet";
 import ServiceCheckbox from "./pages/ServiceCheckbox.jsx"
 import NotificationForm from "./pages/NotificationForm.jsx";
+import ButtonsAndDiv from "./pages/ButtonsAndDiv.jsx";
+import Footer from "./pages/Footer.jsx";
 
 
 function App() {
-  <NotificationForm />
+
   return (
     <Router>
     <Header/>
@@ -33,7 +35,9 @@ function App() {
         <Route path="CodeSnippet" element ={<CodeSnippet />} />
         <Route path="ServiceCheckbox" element = {<ServiceCheckbox />} />
         <Route path="NotificationForm" element = {<NotificationForm/>} />
+        <Route path="ButtonsAndDiv" element = {<ButtonsAndDiv />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
