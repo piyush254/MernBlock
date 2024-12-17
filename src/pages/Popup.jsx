@@ -18,7 +18,6 @@ const Popup = ({ content, onClose }) => {
   );
 };
 
-// Popup Styles
 const overlayStyle = {
   position: "fixed",
   top: 0,

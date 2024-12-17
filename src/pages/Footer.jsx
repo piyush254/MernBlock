@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import Popup from "./Popup"; // Import the Popup component
+import Popup from "./Popup";
 
 const Footer = () => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false); // Control popup visibility
+  const [isPopupOpen, setIsPopupOpen] = useState(false); 
   const [popupContent, setPopupContent] = useState("");
 
   const handlePopup = (content) => {
-    setPopupContent(content); // Set content type (Create Profile/Login)
-    setIsPopupOpen(true); // Open the popup
+    setPopupContent(content); 
+    setIsPopupOpen(true); 
   };
 
   const closePopup = () => {
-    setIsPopupOpen(false); // Close the popup
+    setIsPopupOpen(false); 
   };
 
   return (
