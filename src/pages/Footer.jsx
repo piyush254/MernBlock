@@ -23,6 +23,9 @@ const Footer = () => {
         <li style={listItemStyle} onClick={() => handlePopup("Login")}>
           Login
         </li>
+        <li>
+          <a href="https://github.com/piyush254" target="_blank" rel="noopener noreferrer">Github</a>
+        </li>
       </ul>
       {isPopupOpen && (
         <Popup content={popupContent} onClose={closePopup} />
