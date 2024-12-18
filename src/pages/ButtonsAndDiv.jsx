@@ -27,6 +27,7 @@ function ButtonsAndDiv() {
             name="active"
             onChange={handleCheckboxChange}
             checked={buttonsEnabled}
+            className="mr-2"
           />
           Active
         </label>
@@ -36,6 +37,7 @@ function ButtonsAndDiv() {
             name="deactive"
             onChange={handleCheckboxChange}
             checked={!buttonsEnabled}
+            className="mr-2"
           />
           Deactive
         </label>
@@ -47,8 +49,8 @@ function ButtonsAndDiv() {
           <button
             key={index + 1}
             style={{ margin: "5px", padding: "10px" }}
-            disabled={!buttonsEnabled} // Disable buttons when not active
-            onClick={() => handleButtonClick(index + 1)} // On click, show button serial number
+            disabled={!buttonsEnabled} 
+            onClick={() => handleButtonClick(index + 1)} 
           >
             Button {index + 1}
           </button>
