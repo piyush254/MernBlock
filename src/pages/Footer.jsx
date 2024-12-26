@@ -4,15 +4,15 @@ import Popup from "./Popup";
 const Footer = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false); 
   const [popupContent, setPopupContent] = useState("");
+  const closePopup = () => {
+    setIsPopupOpen(false); 
+  };
 
   const handlePopup = (content) => {
     setPopupContent(content); 
     setIsPopupOpen(true); 
   };
 
-  const closePopup = () => {
-    setIsPopupOpen(false); 
-  };
 
   return (
     <footer style={footerStyle}>
@@ -30,6 +30,7 @@ const Footer = () => {
       {isPopupOpen && (
         <Popup content={popupContent} onClose={closePopup} />
       )}
+      {/* <Popup content={popupContent} onClose={closePopup} /> */}
     </footer>
   );
 };

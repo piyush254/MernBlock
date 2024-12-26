@@ -15,10 +15,32 @@ import ServiceCheckbox from "./pages/ServiceCheckbox.jsx"
 import NotificationForm from "./pages/NotificationForm.jsx";
 import ButtonsAndDiv from "./pages/ButtonsAndDiv.jsx";
 import Footer from "./pages/Footer.jsx";
+import AllTests from "./pages/All-Test.jsx";
+import ClickOutsideHandler from "./pages/ClickOutsideHandler.jsx";
+import FilterComponent from "./pages/FilterComponent.jsx";
+import InfiniteScrollComponent from "./pages/InfiniteScrollComponent.jsx";
 
 
 function App() {
+ 
 
+  const mockData = [
+    {
+      OURPACKAGE: "Full Body Checkup",
+      PACKAGE_ID: "123",
+      FASTING_FLAG: "CF",
+      OFFER_PRICE: 999,
+      PROVIDER_ID: "456",
+    },
+    {
+      OURPACKAGE: "Diabetes Check",
+      PACKAGE_ID: "789",
+      FASTING_FLAG: "NF",
+      OFFER_PRICE: 499,
+      PROVIDER_ID: "012",
+    },
+  ];
+  <InfiniteScrollComponent />
   return (
     <Router>
     <Header/>
@@ -36,6 +58,10 @@ function App() {
         <Route path="ServiceCheckbox" element = {<ServiceCheckbox />} />
         <Route path="NotificationForm" element = {<NotificationForm/>} />
         <Route path="ButtonsAndDiv" element = {<ButtonsAndDiv />} />
+        <Route path="AllTest" element = { <AllTests data={mockData} citySlug="mumbai" color="blue"queryString="some-query"/>}/>
+        <Route path = "ClickOutsideHandler" element = { <ClickOutsideHandler />} />
+        <Route  path = "FilterComponent" element = {<FilterComponent/>}/>
+        <Route  path = "InfiniteScrollComponent" element = { <InfiniteScrollComponent />}/>
       </Routes>
       <Footer />
     </Router>

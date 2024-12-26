@@ -20,7 +20,7 @@ function ButtonsAndDiv() {
   return (
     <div>
       {/* Checkboxes */}
-      <div>
+      <div className="d-flex align-items-center justify-center mt-2">
         <label>
           <input
             type="checkbox"

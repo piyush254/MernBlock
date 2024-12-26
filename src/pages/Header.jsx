@@ -73,6 +73,31 @@ function Header() {
           Buttons And Div
             </NavLink>
         </li>
+        <li>
+          <NavLink to="AllTest" className={({ isActive }) => (isActive ? "active" : "")}>
+            All Test
+          </NavLink>
+        </li>
+         <li>
+          <NavLink to="ClickOutsideHandler" className={({ isActive }) => (isActive ? "active" : "")}>
+          Click Outside Handler
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="FilterComponent" className={({ isActive }) => (isActive ? "active" : "")}>
+          Filter Component
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="InfiniteScrollComponent" className={({ isActive }) => (isActive ? "active" : "")}>
+          Infinite Scroll Component
+          </NavLink>
+        </li>
+          <li>
+          <NavLink to="blankpage" className={({ isActive }) => (isActive ? "active" : "")}>
+          Blank Page
+          </NavLink>
+        </li>
         </ul>
       </nav>
     </>
