@@ -1,0 +1,30 @@
+.toggle-switch {
+  width: 50px;
+  height: 25px;
+  background: #ccc;
+  border-radius: 25px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-switch.toggled {
+  background: linear-gradient(90deg, #32cd32, #00ff00);
+}
+
+.switch-circle {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2.5px;
+  left: 2.5px;
+  transition: left 0.3s ease;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-switch.toggled .switch-circle {
+  justify-content: flex-start;
+  left: calc(100% - 22.5px); /* Adjust to position the circle inside the green toggle */
+}

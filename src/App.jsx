@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
+import {  BrowserRouter as Router,  Routes, Route,  NavLink } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Signin from "./pages/Signin";
@@ -11,7 +11,7 @@ import UserInput from "./pages/UserInput";
 import CategorySelector from "./pages/CategorySelector";
 import Header from "./pages/Header";
 import CodeSnippet from "./pages/CodeSnippet";
-import ServiceCheckbox from "./pages/ServiceCheckbox.jsx"
+import ServiceCheckbox from "./pages/ServiceCheckbox.jsx";
 import NotificationForm from "./pages/NotificationForm.jsx";
 import ButtonsAndDiv from "./pages/ButtonsAndDiv.jsx";
 import Footer from "./pages/Footer.jsx";
@@ -19,10 +19,15 @@ import AllTests from "./pages/All-Test.jsx";
 import ClickOutsideHandler from "./pages/ClickOutsideHandler.jsx";
 import FilterComponent from "./pages/FilterComponent.jsx";
 import InfiniteScrollComponent from "./pages/InfiniteScrollComponent.jsx";
-
+import FetchProfilePack from "./pages/FetchProfilePack.jsx";
+import Card from "./pages/Card.jsx";
+import TestGroups from "./pages/TestGroups.jsx";
+import OtpConfirmation from "./pages/otpConfirmation.jsx";
+import DietitianCard from "./pages/DietitianCard.jsx";
+import ToggleSwitch from "./pages/ToggleSwitch.jsx";
+import HealthConsultation from "./pages/HealthConsultation.jsx";
 
 function App() {
- 
 
   const mockData = [
     {
@@ -40,10 +45,12 @@ function App() {
       PROVIDER_ID: "012",
     },
   ];
-  <InfiniteScrollComponent />
+  const data = ["Immunity"];
+<HealthConsultation/>
+
   return (
     <Router>
-    <Header/>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
@@ -54,14 +61,37 @@ function App() {
         <Route path="YourComponent" element={<YourComponent />} />
         <Route path="userInput" element={<UserInput />} />
         <Route path="CategorySelector" element={<CategorySelector />} />
-        <Route path="CodeSnippet" element ={<CodeSnippet />} />
-        <Route path="ServiceCheckbox" element = {<ServiceCheckbox />} />
-        <Route path="NotificationForm" element = {<NotificationForm/>} />
-        <Route path="ButtonsAndDiv" element = {<ButtonsAndDiv />} />
-        <Route path="AllTest" element = { <AllTests data={mockData} citySlug="mumbai" color="blue"queryString="some-query"/>}/>
-        <Route path = "ClickOutsideHandler" element = { <ClickOutsideHandler />} />
-        <Route  path = "FilterComponent" element = {<FilterComponent/>}/>
-        <Route  path = "InfiniteScrollComponent" element = { <InfiniteScrollComponent />}/>
+        <Route path="CodeSnippet" element={<CodeSnippet />} />
+        <Route
+          path="ServiceCheckbox"
+          element={<ServiceCheckbox data={data} />}
+        />
+        <Route path="NotificationForm" element={<NotificationForm />} />
+        <Route path="ButtonsAndDiv" element={<ButtonsAndDiv />} />
+        <Route
+          path="AllTest"
+          element={
+            <AllTests
+              data={mockData}
+              citySlug="mumbai"
+              color="blue"
+              queryString="some-query"
+            />
+          }
+        />
+        <Route path="ClickOutsideHandler" element={<ClickOutsideHandler />} />
+        <Route path="FilterComponent" element={<FilterComponent />} />
+        <Route
+          path="InfiniteScrollComponent"
+          element={<InfiniteScrollComponent />}
+        />
+        <Route path="FetchProfilePack" element={<FetchProfilePack />} />
+        <Route path="cards" element={<Card />} />
+        <Route path="TestGroup" element={<TestGroups />} />
+        <Route path="OtpConfirmation" element={<OtpConfirmation />} />
+        <Route path="DietitianCard" element={<DietitianCard/>} />
+        <Route path="ToggleSwitch" element={<ToggleSwitch />} />
+        <Route path="HealthConsultation" element={<HealthConsultation/>} />
       </Routes>
       <Footer />
     </Router>

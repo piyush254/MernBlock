@@ -39,26 +39,44 @@ nav:hover {
   transform: scale(1.05);
 }
 
-ul {
+
+/* Styling for ul */
+.nav-list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 20px;
   list-style: none;
   margin: 0;
-  padding: 0;
-}
-
-ul li {
-  padding: 10px 20px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-ul li:hover {
-  background-color: #555; /* Slightly lighter on hover */
-  transform: translateY(-3px); /* Lift effect */
+  padding: 0 20px;
+  background-color: #222; /* Slightly darker background */
   border-radius: 8px;
 }
+
+/* Styling for li */
+.nav-item {
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 8px;
+}
+
+.nav-item:hover {
+  background-color: #555; /* Slightly lighter on hover */
+  transform: translateY(-3px); /* Lift effect */
+}
+
+/* Link styles */
+.nav-item a {
+  color: #f1f1f1; /* Default link color */
+  font-weight: 700;
+  text-decoration: none !important;
+  transition: color 0.3s;
+}
+
+.nav-item a:hover {
+  color: #d9534f; /* Bright red on hover */
+}
+
 
 a {
   color: #f1f1f1;
@@ -96,14 +114,7 @@ footer:hover {
 }
 
 @media (max-width: 1024px) {
-  ul {
-    gap: 15px;
-    padding: 0 10px;
-  }
 
-  ul li {
-    padding: 8px 15px;
-  }
 
   .FirstWord {
     font-size: 1.5rem;
@@ -111,16 +122,21 @@ footer:hover {
 }
 
 @media (max-width: 600px) {
-  ul {
-    gap: 10px;
-    padding: 0 5px;
-  }
-
-  ul li {
-    padding: 5px 10px;
-  }
 
   .FirstWord {
     font-size: 1.2rem;
   }
+}
+.table{
+  background-color: red !important;
+}
+
+.accordion-collapse {
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  max-height: 0; 
+}
+
+.accordion-collapse.show {
+  max-height: 500px; 
 }

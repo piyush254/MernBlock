@@ -17,20 +17,19 @@ const Footer = () => {
   return (
     <footer style={footerStyle}>
       <ul style={listStyle}>
-        <li style={listItemStyle} onClick={() => handlePopup("Create Profile")}>
+        <li  className="ml-4" style={listItemStyle} onClick={() => handlePopup("Create Profile")}>
           Create Profile
         </li>
-        <li style={listItemStyle} onClick={() => handlePopup("Login")}>
+        <li className="ml-4" style={listItemStyle} onClick={() => handlePopup("Login")}>
           Login
         </li>
-        <li>
+        <li className="ml-4">
           <a href="https://github.com/piyush254" target="_blank" rel="noopener noreferrer">Github</a>
         </li>
       </ul>
       {isPopupOpen && (
         <Popup content={popupContent} onClose={closePopup} />
       )}
-      {/* <Popup content={popupContent} onClose={closePopup} /> */}
     </footer>
   );
 };
