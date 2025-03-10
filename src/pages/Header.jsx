@@ -208,6 +208,22 @@ function Header() {
             >
            Health Consultation
             </NavLink>
+          </li>   
+          <li className="nav-item">
+            <NavLink
+              to="DoctorList"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+           DoctorList
+            </NavLink>
+          </li>  
+           <li className="nav-item">
+            <NavLink
+              to="QuotePopup"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+           Quote Popup
+            </NavLink>
           </li>
         </ul>
       </nav>

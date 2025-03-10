@@ -27,4 +27,5 @@
 .toggle-switch.toggled .switch-circle {
   justify-content: flex-start;
   left: calc(100% - 22.5px); /* Adjust to position the circle inside the green toggle */
+  opacity: ;
 }

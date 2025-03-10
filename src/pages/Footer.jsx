@@ -37,7 +37,7 @@ const Footer = () => {
 // Footer Styles
 const footerStyle = {
   textAlign: "center",
-  position: "fixed",
+  // position: "fixed",
   bottom: "0",
   width: "100%",
 };
