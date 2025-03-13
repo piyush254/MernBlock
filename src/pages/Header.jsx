@@ -224,6 +224,30 @@ function Header() {
             >
            Quote Popup
             </NavLink>
+          </li> 
+          <li className="nav-item">
+            <NavLink
+              to="ScrollChangeNumber"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+           Scroll Change Number
+            </NavLink>
+          </li> 
+          <li className="nav-item">
+            <NavLink
+              to="AgeCategorizer"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+            AgeCategorizer
+            </NavLink>
+          </li> 
+          <li className="nav-item">
+            <NavLink
+              to="ExpandingDiv"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+            Expanding Div
+            </NavLink>
           </li>
         </ul>
       </nav>

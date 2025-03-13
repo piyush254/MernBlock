@@ -28,6 +28,9 @@ import ToggleSwitch from "./pages/ToggleSwitch.jsx";
 import HealthConsultation from "./pages/HealthConsultation.jsx";
 import DoctorList from "./pages/DoctorList.jsx"
 import QuotePopup from "./pages/QuotePopup.jsx"
+import ScrollChangeNumber from "./pages/ScrollChangeNumber"
+import AgeCategorizer from "./pages/AgeCategorizer";
+import ExpandingDiv from "./pages/ExpandingDiv"
 
 function App() {
 
@@ -96,6 +99,9 @@ function App() {
         <Route path="HealthConsultation" element={<HealthConsultation/>} />
         <Route path="DoctorList" element={<DoctorList/>} />
         <Route path="QuotePopup" element={<QuotePopup/>} />
+        <Route path="ScrollChangeNumber" element={<ScrollChangeNumber/>} />
+        <Route path="AgeCategorizer" element={<AgeCategorizer/>} />
+        <Route path="ExpandingDiv" element={<ExpandingDiv/>} />
       </Routes>
       <Footer />
     </Router>
