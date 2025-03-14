@@ -1,13 +1,17 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
-export default function ExpandingDiv() {
-  const dataArray = Array.from({ length: 200 }, (_, i) => `Item ${i + 1}`);
-  const baseHeight = window.innerHeight;
+export default function ExpandingDiv({ itemCount = 200 }) {
+  const dataArray = Array.from({ length: itemCount }, (_, i) => `Item ${i + 1}`);
+  const baseHeight = 200; // Fixed base height
   const itemHeight = 50;
   const maxHeight = baseHeight + dataArray.length * itemHeight;
 
   const [height, setHeight] = useState(baseHeight);
   const divRef = useRef(null);
+
+  useEffect(() => {
+    setHeight(baseHeight); // Reset height when itemCount changes
+  }, [itemCount]);
 
   const handleScroll = () => {
     const scrollTop = divRef.current?.scrollTop || 0;
@@ -18,8 +22,8 @@ export default function ExpandingDiv() {
     <div
       ref={divRef}
       onScroll={handleScroll}
-      className="w-screen overflow-y-auto border-2 border-gray-300 bg-white shadow-lg transition-all"
       style={{ height }}
+      className="w-screen overflow-y-auto border-2 border-gray-300 bg-white shadow-lg transition-all"
     >
       <div className="py-4 px-6" style={{ minHeight: maxHeight }}>
         {dataArray.map((item, index) => (
