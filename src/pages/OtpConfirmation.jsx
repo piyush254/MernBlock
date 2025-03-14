@@ -60,4 +60,5 @@ const OtpConfirmation = () => {
   );
 };
 
+
 export default OtpConfirmation;
