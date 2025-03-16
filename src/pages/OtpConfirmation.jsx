@@ -62,3 +62,12 @@
 
 
 // export default OtpConfirmation;
+import React from 'react'
+
+function OtpConfirmation() {
+  return (
+    <div>OtpConfirmation</div>
+  )
+}
+
+export default OtpConfirmation
