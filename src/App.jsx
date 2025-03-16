@@ -22,7 +22,8 @@ import InfiniteScrollComponent from "./pages/InfiniteScrollComponent.jsx";
 import FetchProfilePack from "./pages/FetchProfilePack.jsx";
 import Card from "./pages/Card.jsx";
 import TestGroups from "./pages/TestGroups.jsx";
-import OtpConfirmation from "./pages/otpConfirmation.jsx";
+// import OtpConfirmation from "./pages/otpConfirmation.jsx";
+import OtpConfirmation from "./pages/OtpConfirmation.jsx"
 import DietitianCard from "./pages/DietitianCard.jsx";
 import ToggleSwitch from "./pages/ToggleSwitch.jsx";
 import HealthConsultation from "./pages/HealthConsultation.jsx";
@@ -51,7 +52,7 @@ function App() {
     },
   ];
   const data = ["Immunity"];
-<HealthConsultation/>
+
 
   return (
     <Router>
