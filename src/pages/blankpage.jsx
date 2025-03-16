@@ -7,3 +7,5 @@ function blankpage() {
 }
 
 export default blankpage
+
+
